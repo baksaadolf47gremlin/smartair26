@@ -102,7 +102,6 @@ export function Navbar() {
           </div>
 
             <div className="hidden lg:flex items-center">
-              <a
                 href="tel:+36206152589"
                 className={cn(
                   "flex items-center space-x-3 px-7 py-3 rounded-2xl text-sm font-black transition-all duration-300 active:scale-95",

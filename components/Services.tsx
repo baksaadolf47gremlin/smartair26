@@ -6,42 +6,36 @@ import { motion } from 'framer-motion';
 
 const services = [
   {
-    title: 'Lakossági klímaszerelés',
-    description: 'Segítünk megtalálni a legoptimálisabb hűtő és fűtő teljesítményű klímát otthonába! Célunk, hogy ez a beruházás hosszú távon szolgálja kényelmét, egy egészséges lakókörnyezetet kialakítva.',
+    title: 'Lakossági klíma-szerelés',
+    description: 'Segítünk megtalálni a legoptimálisabb hűtő és fűtő teljesítményű klímát otthonába! Az a célunk, hogy ez a beruházás hosszú távon szolgálja Ön és családja kényelmét, hozzájárulva egy egészséges, kellemes lakókörnyezet kialakításához.',
     image: '/images/service-1.jpg',
-    href: '#klima',
+    href: '#kapcsolat',
   },
   {
-    title: 'Ipari klímatisztítás',
-    description: 'Speciális vegyszeres tisztítás és fertőtlenítés, amely garantálja a higiénikus és hatékony működést gyártócsarnokokban, irodákban és közintézményekben.',
+    title: 'Ipari klimatizálás cégeknek',
+    description: 'Az ipari légkondícionálás olyan speciális, energiatakarékos rendszereket foglal magában, amelyek célja, hogy biztosítsák a megfelelő hőmérsékletet, páratartalmat és légminőséget a gyártócsarnokokban, raktárakban, irodaházakban és egyéb nagy területű környezetekben.',
     image: '/images/service-2.jpg',
-    href: '#ipari',
+    href: '#kapcsolat',
   },
   {
-    title: 'Cégeknek hőszivattyús megoldás hűtés és fűtés',
-    description: 'Kiemelkedő energiahatékonyságú Daikin hőszivattyúk tervezése és kivitelezése. Csökkentse vállalkozása rezsiköltségét fenntartható technológiával.',
-    image: '/images/hero-widescreen-4k.png', 
-    href: '#hoszivattyu',
-  },
-  {
-    title: 'Azonnali karbantartás',
-    description: 'A jól karbantartott eszköz hosszabb ideig, optimális energiafogyasztás mellett üzemel. Rendszeres felülvizsgálattal megelőzzük a váratlan meghibásodásokat.',
-    image: '/images/service-3.jpg',
-    href: '#karbantartas',
+    title: 'Hőszivattyú - modern hűtés-fűtés',
+    description: 'A hőszivattyú a modern fűtési és hűtési rendszerek csúcstechnológiája. A Daikin hőszivattyú működése akár 70%-kal kevesebb energiát vesz igénybe, mint a hagyományos fűtési rendszerek. A rendszer tökéletes megtervezése és telepítése szakértelmet kíván.',
+    image: '/images/hero-1-ultra-sharp.png', 
+    href: '#kapcsolat',
   }
 ];
 
 export function Services() {
   return (
-    <section id="szolg" className="py-32 md:py-40 bg-slate-50 relative overflow-hidden">
+    <section id="szolg" className="py-24 md:py-32 bg-slate-50 relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         
-        <div className="text-center max-w-4xl mx-auto mb-24">
+        <div className="text-center max-w-4xl mx-auto mb-20">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-secondary font-bold tracking-wider uppercase text-sm mb-4 block"
+            className="text-secondary font-black tracking-[0.2em] uppercase text-xs mb-4 block"
           >
             Szolgáltatásaink
           </motion.span>
@@ -51,11 +45,20 @@ export function Services() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-black text-primary"
           >
-            Minden, ami hűtés és fűtés
+            SMARTAIR - klíma és hőszivattyú okosan
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-slate-500 mt-6 text-lg max-w-3xl mx-auto"
+          >
+            Csak a legmodernebb, leginnovatívabb technológiákat és eszközöket alkalmazzuk, a hosszú távú, fenntartható megoldásokban hiszünk. Minden épület egyedi, ezért egyedi megoldásokat is igényelnek!
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
@@ -63,44 +66,40 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-100"
+              className="group relative overflow-hidden rounded-[2rem] bg-white shadow-xl hover:shadow-2xl transition-all duration-500 border border-slate-100 flex flex-col h-full"
             >
-              <div className="relative h-64 md:h-80 w-full overflow-hidden">
-                <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+              <div className="relative h-64 w-full overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="p-8 relative bg-white">
-                <div className="absolute -top-6 left-8 bg-[#C1272D] text-white px-6 py-2.5 rounded-full shadow-xl z-20 transform -rotate-2 group-hover:rotate-0 transition-transform duration-300 border-2 border-white/20">
-                  <span className="font-black text-xl font-heading leading-none">{idx + 1}</span>
-                </div>
-                <h3 className="text-2xl font-bold font-heading text-primary mt-4 mb-4 group-hover:text-secondary transition-colors">
+              <div className="p-8 flex flex-col flex-grow">
+                <h3 className="text-2xl font-bold font-heading text-primary mb-4 group-hover:text-secondary transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-slate-600 mb-8 leading-relaxed">
+                <p className="text-slate-600 mb-8 leading-relaxed text-sm flex-grow">
                   {service.description}
                 </p>
-                <a 
-                  href={service.href}
-                  className="inline-flex items-center text-secondary font-bold hover:text-primary transition-colors uppercase tracking-wide text-sm"
-                >
-                  Részletek
-                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+                <div className="mt-auto">
+                  <a 
+                    href={service.href}
+                    className="inline-flex items-center text-secondary font-bold hover:gap-3 transition-all uppercase tracking-widest text-[10px]"
+                  >
+                    Ez érdekel!
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
-      
-      {/* Abstract Shape */}
-      <div className="absolute left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-slate-100 to-transparent z-0 pointer-events-none" />
     </section>
   );
 }

@@ -57,7 +57,7 @@ export function ContactMap() {
           className="mt-8 text-center"
         >
           <p className="text-slate-400 font-body text-sm font-medium italic">
-            1145 Budapest, Erzsébet királyné útja 19.
+            1142 Budapest, Erzsébet királyné útja 57-61.
           </p>
         </motion.div>
       </div>

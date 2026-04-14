@@ -25,11 +25,11 @@ export function Footer() {
               A legmodernebb, leginnovatívabb technológiákat alkalmazzuk. A hosszú távú, fenntartható megoldásokban hiszünk, hogy épülete mindig a tökéletes komfortot nyújtsa.
             </p>
             <div className="space-y-4 text-sm text-slate-300">
-              <a href="tel:+36202786150" className="flex items-center space-x-3 hover:text-white transition-colors group">
+              <a href="tel:+36206152589" className="flex items-center space-x-3 hover:text-white transition-colors group">
                 <span className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#0077B6] group-hover:text-white transition-all">
                   <Phone size={16} />
                 </span>
-                <span className="tracking-wide">+36 20 278 6150</span>
+                <span className="tracking-wide">+36 20 615 2589</span>
               </a>
               <a href="mailto:info@smart-air.hu" className="flex items-center space-x-3 hover:text-white transition-colors group">
                 <span className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#0077B6] group-hover:text-white transition-all">

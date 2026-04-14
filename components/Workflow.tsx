@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 const steps = [
   {
     icon: <PhoneCall className="w-6 h-6 text-white" />,
-    title: '1. Kapcsolatfelvétel',
-    desc: 'Vegye fel velünk a kapcsolatot, hogy röviden átbeszélhessük melyik szolgáltatásunkra van szüksége, illetve, hogy időpontot egyeztessük egy helyszíni felmérésre.'
+    title: '1. Kapcsolat-felvétel',
+    desc: 'Vegye fel velünk a kapcsolatot, hogy röviden átbeszélhessük melyik szolgáltatásunkra van szüksége, illetve, hogy időpontot egyeztessünk egy helyszíni felmérésre.'
   },
   {
     icon: <MapPin className="w-6 h-6 text-white" />,
@@ -19,8 +19,8 @@ const steps = [
   },
   {
     icon: <FileSignature className="w-6 h-6 text-white" />,
-    title: '3. Árajánlat készítés és szerződéskötés',
-    desc: 'A részletes és precíz árajánlat tartalmazza a berendezés és a szükséges szerelvények árát, a telepítés költségeit és időtartamát. Nem lesznek rejtett, utólagos költségek!'
+    title: '3. Árajánlat-készítés és szerződés-kötés',
+    desc: 'A részletes és precíz árajánlat tartalmazza a berendezés és a szükséges szerelvények árát, a telepítés költségeit és időtartamát. Nem lesznek rejtett, utólagos költségek! Amennyiben árajánlatunk elnyerte tetszését, úgy megkötjük a szerződést, amelyben megállapodunk a kezdési időpontról is.'
   },
   {
     icon: <Settings className="w-6 h-6 text-white" />,
@@ -30,15 +30,13 @@ const steps = [
   {
     icon: <GraduationCap className="w-6 h-6 text-white" />,
     title: '5. Átadás és oktatás',
-    desc: 'A megfelelően beüzemelt rendszert és berendezést átadjuk, illetve elmagyarázzuk hogyan tudja a legmagasabb hatásfokkal működtetni.'
+    desc: 'A megfelelően beüzemelt rendszert és berendezést átadjuk, illetve elmagyarázzuk hogyan tudja a legmagasabb hatásfokkal működtetni. Megválaszoljuk az esetlegesen felmerülő kérdéseit.'
   },
   {
     icon: <PenTool className="w-6 h-6 text-white" />,
-    title: '6. Ügyféltámogatás és karbantartás',
-    desc: 'Az optimális működés érdekében javasoljuk a rendszer rendszeres karbantartását. Szolgáltatásunk része, hogy emlékeztetőt küldünk.'
+    title: '6. Ügyfél-támogatás és karbantartás',
+    desc: 'Az optimális működés érdekében javasoljuk a rendszer rendszeres karbantartását. Szolgáltatásunk része, hogy emlékeztetőt küldünk a karbantartási időpontokról, és gyorsan reagálunk, ha esetleg probléma merülne fel.'
   }
-];
-
 const workflowImages = [
   '/images/workflow-1.jpg',
   '/images/workflow-2.jpg',

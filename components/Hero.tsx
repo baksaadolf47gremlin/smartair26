@@ -52,21 +52,20 @@ export function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black leading-[1.05] text-white">
-              Kompromisszum <br />
-              mentes <span className="text-white underline underline-offset-8 decoration-white">teljesítmény.</span>
+              Kompromisszum-mentes <br />
+              <span className="text-white">megoldások - Precizitás.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed font-medium">
-              Otthoni kényelem és ipari hatékonyság – mérnöki precizitással. <br className="hidden md:block" /> 
-              A Daikin technológia legjava, profi telepítéssel és garanciával.
+            <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
+              Daikin hőszivattyúk és hűtő-fűtő klímák forgalmazásával, beszerelésével, valamint karbantartásával és javításával foglalkozunk, professzionális szolgáltatásokat nyújtva lakossági és vállalati ügyfeleknek egyaránt. Otthonát, telephelyét fenntarthatóvá, energiatakarékossá, kényelmesebbé tesszük.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5 pt-4">
               <a
                 href="#kapcsolat"
-                className="inline-flex items-center justify-center bg-secondary text-white px-6 md:px-7 py-2.5 md:py-3 rounded-xl font-bold text-sm hover:bg-[#a12025] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group overflow-hidden relative"
+                className="inline-flex items-center justify-center bg-secondary text-white px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold text-sm hover:bg-[#a12025] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group overflow-hidden relative"
               >
-                <span className="relative z-10">Ingyenes felmérést kérek</span>
+                <span className="relative z-10">Erre van szükségem!</span>
                 <ChevronRight className="relative z-10 ml-2 group-hover:translate-x-1.5 transition-transform duration-300" />
                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
