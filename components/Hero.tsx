@@ -30,7 +30,6 @@ export function Hero() {
             unoptimized={true}
             style={{ 
               filter: 'contrast(1.15) brightness(0.9) saturate(1.1)',
-              imageRendering: 'high-quality'
             }}
           />
         </motion.div>
