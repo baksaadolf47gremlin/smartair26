@@ -60,8 +60,8 @@ export function Workflow() {
 
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
-      {/* Premium Pre-workflow CTA */}
-      <div className="relative py-24 md:py-32 overflow-hidden bg-primary">
+      {/* Premium Pre-workflow CTA - Compact & Filled */}
+      <div className="relative py-16 md:py-24 overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 to-[#002f48]" />
         
@@ -71,11 +71,11 @@ export function Workflow() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] md:rounded-[4rem] shadow-2xl shadow-black/40 overflow-hidden"
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl shadow-black/40 overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              <div className="lg:col-span-7 p-8 md:p-12 lg:p-20 lg:pr-12 z-10 relative">
-                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10">
+              <div className="lg:col-span-7 p-8 md:p-12 lg:p-16 lg:pr-12 z-10 relative">
+                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
@@ -83,31 +83,30 @@ export function Workflow() {
                   <span className="text-white/60 text-[10px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-8 leading-[1.05] text-white tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 leading-[1.05] text-white tracking-tight">
                   Tervezzük meg együtt <br /> 
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/40">klímarendszerét!</span>
+                  <span className="text-white/40">klímarendszerét!</span>
                 </h2>
                 
-                <p className="text-lg md:text-xl text-white/70 font-body leading-relaxed max-w-lg mb-12">
+                <p className="text-lg md:text-xl text-white/70 font-body leading-relaxed max-w-lg mb-8">
                   Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb és leginkább energiatakarékos megoldás kiválasztásában.
                 </p>
 
-                {/* Minimalist USPs */}
-                <div className="flex flex-wrap gap-x-10 gap-y-4 mb-14">
+                <div className="flex flex-wrap gap-x-8 gap-y-3 mb-10">
                   {[
                     "Mérnöki precizitás",
                     "Hivatalos garancia",
                     "Daikin szakértelem"
                   ].map((text, i) => (
                     <div key={i} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
-                      <span className="text-white/80 text-sm font-bold tracking-tight">{text}</span>
+                      <div className="w-1 h-1 rounded-full bg-secondary" />
+                      <span className="text-white/80 text-[10px] md:text-xs font-bold uppercase tracking-wider">{text}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center gap-6">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-10 py-4 rounded-xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_10px_40px_-10px_rgba(255,82,82,0.4)] hover:shadow-white/20 active:scale-95 overflow-hidden">
+                <div className="flex">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-10 py-4 rounded-xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-xl overflow-hidden">
                     <span className="relative z-10 flex items-center gap-4">
                       AJÁNLATOT KÉREK
                       <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,19 +116,22 @@ export function Workflow() {
                   </a>
                 </div>
               </div>
-              <div className="lg:col-span-5 relative h-full min-h-[450px] hidden lg:flex items-center justify-center p-12">
-                <div className="relative w-full max-w-[400px] aspect-square">
-                  {/* Clean, high-precision frame */}
-                  <div className="absolute inset-0 rounded-[3rem] overflow-hidden border-2 border-white/20 shadow-2xl rotate-2">
-                    <Image 
-                      src="/images/workflow-2.jpg" 
-                      alt="Professzionális kivitelezés" 
-                      fill 
-                      className="object-cover"
-                    />
+
+              <div className="lg:col-span-5 relative h-full min-h-[450px] hidden lg:flex items-center justify-center p-8">
+                <div className="relative w-full h-full max-w-[450px]">
+                  {/* Primary Image - Bottom/Right */}
+                  <div className="absolute top-12 right-0 w-[85%] aspect-[4/3] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl z-0">
+                    <Image src="/images/workflow-2.jpg" alt="Professzionális munka" fill className="object-cover" />
                   </div>
-                  {/* Subtle accent border */}
-                  <div className="absolute inset-0 rounded-[3rem] border border-white/10 -rotate-2 pointer-events-none" />
+                  
+                  {/* Secondary Image - Top/Left - Overlapping */}
+                  <div className="absolute top-0 left-0 w-[70%] aspect-square rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl z-10">
+                    <Image src="/images/hero-1.jpg" alt="Klímarendszer" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-primary/10" />
+                  </div>
+
+                  {/* Clean Accent */}
+                  <div className="absolute -bottom-4 right-12 w-24 h-24 border-b-2 border-r-2 border-secondary/40 rounded-br-2xl" />
                 </div>
               </div>
             </div>
@@ -151,6 +153,7 @@ export function Workflow() {
         </div>
 
         <div ref={containerRef} className="max-w-6xl mx-auto relative">
+          {/* Vertical Spine */}
           <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[2px] -translate-x-1/2 z-0">
             <div className="absolute inset-0 bg-slate-200" />
             <motion.div style={{ scaleY }} className="absolute inset-0 bg-gradient-to-b from-primary via-secondary to-primary origin-top" />
@@ -211,7 +214,6 @@ export function Workflow() {
 function PhaseCard({ step, align }: { step: any, align: 'left' | 'right' }) {
   return (
     <div className="relative">
-      {/* Horizontal Connector - ONLY visible when vertical spine reaches it */}
       <motion.div 
         initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
