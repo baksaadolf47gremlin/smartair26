@@ -34,7 +34,7 @@ export function ContactMap() {
           {/* The Pure Map */}
           <div className="w-full h-[450px] md:h-[600px]">
             <iframe
-              src="https://maps.google.com/maps?q=SmartAir%20Budapest&t=m&z=15&output=embed&iwloc=near"
+              src="https://maps.google.com/maps?q=1142%20Budapest,%20Erzs%C3%A9bet%20kir%C3%A1lyn%C3%A9%20%C3%BAtja%2057-61&t=m&z=16&output=embed&iwloc=near"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'contrast(1.02) saturate(1.05)' }}
@@ -57,7 +57,7 @@ export function ContactMap() {
           className="mt-8 text-center"
         >
           <p className="text-slate-400 font-body text-sm font-medium italic">
-            1142 Budapest, Erzsébet királyné útja 57-61.
+            1142 Budapest, Erzsébet királyné útja 57-61
           </p>
         </motion.div>
       </div>

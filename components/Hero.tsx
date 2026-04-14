@@ -53,7 +53,7 @@ export function Hero() {
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black leading-[1.05] text-white">
               Kompromisszum-mentes <br />
-              <span className="text-white">megoldások - Precizitás.</span>
+              <span className="text-white">megoldások - Precizitás</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-medium">
