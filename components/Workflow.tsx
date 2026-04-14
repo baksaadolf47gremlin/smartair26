@@ -61,38 +61,37 @@ export function Workflow() {
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
       {/* Premium Pre-workflow CTA - Compact & Filled */}
-      <div className="relative py-16 md:py-24 overflow-hidden bg-primary">
+      <div className="relative py-10 md:py-14 overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 to-[#002f48]" />
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div 
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2.5rem] md:rounded-[3rem] shadow-2xl shadow-black/40 overflow-hidden"
+            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-black/40 overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              <div className="lg:col-span-7 p-8 md:p-12 lg:p-16 lg:pr-12 z-10 relative">
-                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-8">
+              <div className="lg:col-span-7 p-6 md:p-8 lg:p-10 lg:pr-10 z-10 relative">
+                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full mb-4">
                   <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
                   </span>
-                  <span className="text-white/60 text-[10px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
+                  <span className="text-white/60 text-[9px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-6 leading-[1.05] text-white tracking-tight">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black mb-4 leading-[1.1] text-white tracking-tight">
                   Tervezzük meg együtt <br /> 
                   <span className="text-white/40">klímarendszerét!</span>
                 </h2>
                 
-                <p className="text-lg md:text-xl text-white/70 font-body leading-relaxed max-w-lg mb-8">
-                  Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb és leginkább energiatakarékos megoldás kiválasztásában.
+                <p className="text-base md:text-lg text-white/70 font-body leading-relaxed max-w-lg mb-6">
+                  Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb megoldás kiválasztásában.
                 </p>
 
-                <div className="flex flex-wrap gap-x-8 gap-y-3 mb-10">
+                <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8">
                   {[
                     "Mérnöki precizitás",
                     "Hivatalos garancia",
@@ -100,16 +99,16 @@ export function Workflow() {
                   ].map((text, i) => (
                     <div key={i} className="flex items-center space-x-2">
                       <div className="w-1 h-1 rounded-full bg-secondary" />
-                      <span className="text-white/80 text-[10px] md:text-xs font-bold uppercase tracking-wider">{text}</span>
+                      <span className="text-white/60 text-[9px] font-bold uppercase tracking-widest">{text}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-10 py-4 rounded-xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-xl overflow-hidden">
-                    <span className="relative z-10 flex items-center gap-4">
-                      AJÁNLATOT KÉREK
-                      <svg className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-8 py-3 rounded-xl font-black text-sm hover:bg-white hover:text-primary transition-all duration-500 shadow-xl overflow-hidden uppercase tracking-widest">
+                    <span className="relative z-10 flex items-center gap-3">
+                      Ajánlatkérés
+                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
@@ -117,21 +116,17 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative h-full min-h-[450px] hidden lg:flex items-center justify-center p-8">
-                <div className="relative w-full h-full max-w-[450px]">
-                  {/* Primary Image - Bottom/Right */}
-                  <div className="absolute top-12 right-0 w-[85%] aspect-[4/3] rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl z-0">
+              <div className="lg:col-span-5 relative h-full min-h-[300px] lg:min-h-[400px] hidden lg:flex items-center justify-center p-6">
+                <div className="relative w-full h-[260px] max-w-[420px]">
+                  {/* Primary Image */}
+                  <div className="absolute top-10 right-0 w-[80%] aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl z-0">
                     <Image src="/images/workflow-2.jpg" alt="Professzionális munka" fill className="object-cover" />
                   </div>
                   
-                  {/* Secondary Image - Top/Left - Overlapping */}
-                  <div className="absolute top-0 left-0 w-[70%] aspect-square rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl z-10">
+                  {/* Secondary Image */}
+                  <div className="absolute top-0 left-0 w-[65%] aspect-square rounded-2xl overflow-hidden border border-white/20 shadow-2xl z-10">
                     <Image src="/images/hero-1.jpg" alt="Klímarendszer" fill className="object-cover" />
-                    <div className="absolute inset-0 bg-primary/10" />
                   </div>
-
-                  {/* Clean Accent */}
-                  <div className="absolute -bottom-4 right-12 w-24 h-24 border-b-2 border-r-2 border-secondary/40 rounded-br-2xl" />
                 </div>
               </div>
             </div>
