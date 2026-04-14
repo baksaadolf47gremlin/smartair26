@@ -44,10 +44,10 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-10"
           >
-            <div className="flex items-center space-x-4">
-              <span className="h-[2px] w-12 bg-secondary shadow-[0_0_10px_rgba(255,82,82,0.5)]" />
-              <span className="uppercase tracking-[0.3em] text-white font-black text-xs md:text-sm drop-shadow-sm">
-                <span className="text-secondary italic mr-1">Daikin</span> Hivatalos Partner
+            <div className="inline-flex items-center space-x-3 bg-white/5 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full">
+              <span className="h-1 w-8 bg-[#FF4D4D] rounded-full shadow-[0_0_12px_rgba(255,77,77,0.6)]" />
+              <span className="uppercase tracking-[0.2em] text-white font-black text-[10px] md:text-xs">
+                <span className="text-[#FF4D4D] mr-1">Daikin</span> Hivatalos Partner
               </span>
             </div>
             
