@@ -59,22 +59,40 @@ interface ComingSoonProps {
 
 export function ComingSoon({ pageTitle }: ComingSoonProps) {
   return (
-    <div className="min-h-screen bg-[#002B41] relative overflow-hidden flex flex-col items-center justify-center px-6 py-24">
+    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center px-6 py-24"
+      style={{ background: 'linear-gradient(135deg, #000d1a 0%, #001f35 40%, #0a0a0a 100%)' }}
+    >
 
-      {/* Background subtle grid */}
+      {/* Strong diagonal color split */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top-left vivid red zone */}
+        <div className="absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(193,39,45,0.35) 0%, transparent 70%)' }}
+        />
+        {/* Bottom-right vivid blue zone */}
+        <div className="absolute -bottom-32 -right-32 w-[600px] h-[600px] rounded-full"
+          style={{ background: 'radial-gradient(circle, rgba(0,119,182,0.3) 0%, transparent 70%)' }}
+        />
+        {/* Center subtle glow to blend zones */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] rounded-full"
+          style={{ background: 'radial-gradient(ellipse, rgba(0,43,65,0.6) 0%, transparent 70%)' }}
+        />
+      </div>
+
+      {/* Grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.04]"
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(rgba(255,255,255,1) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)`,
           backgroundSize: '48px 48px',
         }}
       />
 
-      {/* Red glow top-left */}
-      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-[#C1272D]/10 rounded-full blur-[120px] pointer-events-none" />
-      {/* Blue glow bottom-right */}
-      <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-[#0077B6]/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* Top edge red line accent */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C1272D] to-transparent opacity-80" />
+      {/* Bottom edge blue line accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#0077B6] to-transparent opacity-60" />
 
       <div className="relative z-10 max-w-4xl w-full mx-auto text-center">
 
