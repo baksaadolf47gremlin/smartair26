@@ -60,17 +60,16 @@ export function Workflow() {
 
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
-      {/* Final Corrected CTA - Vertical Images & Compact Frame */}
+      {/* Cleaned CTA - No bugs, No glow */}
       <div className="relative py-8 md:py-12 overflow-hidden bg-primary">
-        <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#001a2c]" />
+        <div className="absolute inset-0 bg-[#002f48]" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] md:rounded-[4rem] shadow-2xl overflow-hidden"
+            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-lg overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
               <div className="lg:col-span-7 p-8 md:p-12 lg:p-16 z-10 relative">
@@ -98,7 +97,7 @@ export function Workflow() {
                 </div>
 
                 <div className="flex">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-10 py-4 rounded-xl font-black text-sm hover:bg-white hover:text-primary transition-all duration-500 shadow-xl overflow-hidden uppercase tracking-widest">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-10 py-4 rounded-xl font-black text-sm hover:bg-white hover:text-primary transition-all duration-500 overflow-hidden uppercase tracking-widest">
                     <span className="relative z-10 flex items-center gap-3">
                       Ajánlatot kérek
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,7 +114,7 @@ export function Workflow() {
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl h-full translate-y-2"
+                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-full translate-y-2"
                   >
                     <Image src="/images/workflow-1.jpg" alt="Felmérés" fill className="object-cover" />
                   </motion.div>
@@ -123,7 +122,7 @@ export function Workflow() {
                     initial={{ y: -20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl h-full -translate-y-2"
+                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-full -translate-y-2"
                   >
                     <Image src="/images/workflow-3.jpg" alt="Telepítés" fill className="object-cover" />
                   </motion.div>
