@@ -3,55 +3,70 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Wind, Snowflake, Flame } from 'lucide-react';
+import { cn } from "@/lib/utils";
 
-// Using the generated image path (placeholder for now, will replace with correct one)
-const HERO_IMAGE = '/modern_interior_ac.png'; 
+const HERO_IMAGE = '/images/hero-widescreen-4k.png'; 
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center pt-48 pb-24 overflow-hidden bg-primary shadow-2xl">
+      {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-primary/40 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
         <Image
           src={HERO_IMAGE}
-          alt="Modern Interior with Air Conditioning"
+          alt="Daikin Prémium Klímatechnika"
           fill
-          className="object-cover object-center"
+          className="object-cover md:object-center"
           priority
+          quality={100}
+          sizes="100vw"
+          style={{ 
+            filter: 'contrast(1.1) brightness(1.05) saturate(1.05)',
+            imageRendering: '-webkit-optimize-contrast'
+          }}
         />
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-10 md:px-20 relative z-20 mt-12">
+        <div className="max-w-2xl">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="space-y-10"
           >
-            <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold tracking-wide uppercase mb-6">
-              Daikin Hivatalos Partner
-            </span>
-            <h1 className="text-5xl md:text-7xl font-heading font-black leading-tight mb-6 text-primary">
-              Kompromisszum-mentes <br />
-              <span className="text-secondary">megoldások</span> – Precizitás
+            <div className="flex items-center space-x-4">
+              <span className="h-[2px] w-12 bg-secondary" />
+              <span className="uppercase tracking-[0.3em] text-secondary font-black text-xs md:text-sm">
+                Daikin Hivatalos Partner
+              </span>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-black leading-[1.05] text-white">
+              Kompromisszum <br />
+              mentes <span className="text-white underline underline-offset-8 decoration-white">teljesítmény.</span>
             </h1>
-            <p className="text-xl text-foreground/80 mb-10 max-w-xl leading-relaxed">
-              Daikin hőszivattyúk és hűtő-fűtő klímák forgalmazásával, beszerelésével és karbantartásával foglalkozunk. Tegye otthonát fenntarthatóvá és kényelmesebbé szakembereinkkel.
+            
+            <p className="text-xl md:text-2xl text-white/80 max-w-xl leading-relaxed font-medium">
+              Otthoni kényelem és ipari hatékonyság – mérnöki precizitással. <br className="hidden md:block" /> 
+              A Daikin technológia legjava, profi telepítéssel és garanciával.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-5 pt-4">
               <a
-                href="#contact"
-                className="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 group"
+                href="#kapcsolat"
+                className="inline-flex items-center justify-center bg-secondary text-white px-6 md:px-7 py-2.5 md:py-3 rounded-xl font-bold text-sm hover:bg-[#a12025] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group overflow-hidden relative"
               >
-                Ingyenes felmérést kérek
-                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <span className="relative z-10">Ingyenes felmérést kérek</span>
+                <ChevronRight className="relative z-10 ml-2 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center justify-center bg-white/50 backdrop-blur-md border border-primary/20 text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/80 transition-all"
+                className="inline-flex items-center justify-center bg-white/5 backdrop-blur-xl border border-white/20 text-white px-6 md:px-7 py-2.5 md:py-3 rounded-xl font-bold text-sm hover:bg-white/10 transition-all hover:-translate-y-0.5"
               >
                 Szolgáltatásaink
               </a>
@@ -60,8 +75,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-secondary/5 blur-[120px] rounded-full -mr-20 -mb-20 animate-pulse" />
     </section>
   );
 }
