@@ -160,15 +160,15 @@ export function ComingSoon({ pageTitle }: ComingSoonProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 + idx * 0.07 }}
-              className="group bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 rounded-2xl p-5 text-left transition-all duration-300 cursor-default"
+              className="group bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-white/20 rounded-2xl p-5 text-left transition-all duration-300 cursor-default"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#C1272D]/20 border border-[#C1272D]/20 flex items-center justify-center text-[#C1272D] mb-4 group-hover:bg-[#C1272D]/30 transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-[#C1272D] flex items-center justify-center text-white mb-4 shadow-lg shadow-[#C1272D]/30 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
               <h3 className="text-white font-bold text-sm mb-1.5 leading-tight">
                 {feature.title}
               </h3>
-              <p className="text-white/40 text-xs leading-relaxed">
+              <p className="text-white/50 text-xs leading-relaxed">
                 {feature.desc}
               </p>
             </motion.div>
