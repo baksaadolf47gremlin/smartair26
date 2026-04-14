@@ -71,11 +71,11 @@ export function Workflow() {
             viewport={{ once: true }}
             className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-xl overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              <div className="lg:col-span-7 p-6 md:p-8 lg:p-10 z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-11 items-center">
+              <div className="lg:col-span-7 p-6 md:p-8 z-10">
                 <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-4">
                   <div className="w-1 h-1 rounded-full bg-secondary animate-pulse" />
-                  <span className="text-white/60 text-[8px] font-black tracking-[0.3em] uppercase">Helyszíni Felmérés</span>
+                  <span className="text-white/60 text-[8px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
                 </div>
                 
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-black mb-3 leading-tight text-white tracking-tight">
@@ -98,12 +98,12 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative h-full min-h-[280px] hidden lg:flex items-center p-6 pr-10">
-                <div className="grid grid-cols-2 gap-4 w-full h-[260px]">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl h-full translate-y-2">
+              <div className="lg:col-span-4 relative h-full min-h-[220px] hidden lg:flex items-center p-6 lg:pr-10">
+                <div className="grid grid-cols-2 gap-3 w-full h-[200px]">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-[85%]">
                     <Image src="/images/workflow-1.jpg" alt="Felmérés" fill className="object-cover" />
                   </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-2xl h-full -translate-y-2">
+                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-[85%] mt-auto">
                     <Image src="/images/workflow-3.jpg" alt="Telepítés" fill className="object-cover" />
                   </div>
                 </div>
