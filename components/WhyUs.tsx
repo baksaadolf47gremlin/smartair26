@@ -119,8 +119,6 @@ export function WhyUs() {
                 <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-3xl mx-auto mb-10 flex items-center justify-center group-hover:from-[#FF5252] group-hover:to-[#FF8A80] group-hover:border-[#FF5252] transition-all duration-700 shadow-xl relative">
                   {/* Base Glow */}
                   <div className="absolute inset-0 rounded-3xl bg-[#FF5252]/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
-                  {/* Pulsing Aura */}
-                  <div className="absolute inset-0 rounded-3xl bg-[#FF5252]/20 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   
                   <div className="relative z-10 group-hover:text-white transition-colors duration-500">
                     {item.icon}
