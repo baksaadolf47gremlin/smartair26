@@ -102,7 +102,7 @@ export function Workflow() {
                 </div>
 
                 <div className="flex">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-12 py-5 rounded-2xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_20px_40px_-10px_rgba(255,82,82,0.3)] hover:shadow-white/20 active:scale-95 overflow-hidden">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-12 py-5 rounded-2xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 overflow-hidden">
                     <span className="relative z-10 flex items-center gap-4 uppercase tracking-widest">
                       Ajánlatot kérek
                       <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,10 +137,6 @@ export function Workflow() {
                     <Image src="/images/workflow-3.jpg" alt="Professzionális kivitelezés" fill className="object-cover" />
                     <div className="absolute inset-0 bg-primary/10" />
                   </motion.div>
-
-                  {/* Decorative Elements */}
-                  <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
-                  <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-white/10 rounded-bl-[4rem]" />
                 </div>
               </div>
             </div>
