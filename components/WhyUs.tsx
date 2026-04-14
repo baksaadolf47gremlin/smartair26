@@ -78,17 +78,20 @@ export function WhyUs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
             {
-              icon: <Award className="w-10 h-10 text-white" strokeWidth={1} />,
+              id: "01",
+              icon: <Award className="w-10 h-10 text-[#FF5252]" strokeWidth={1.5} />,
               title: "Tapasztalat és szakértelem",
               desc: "Számos elvégzett munka és elégedett ügyfél a hátunk mögött. Üzleti és lakossági téren is bizonyítottunk."
             },
             {
-              icon: <Star className="w-10 h-10 text-white" strokeWidth={1} />,
+              id: "02",
+              icon: <Star className="w-10 h-10 text-[#FF5252]" strokeWidth={1.5} />,
               title: "Prémium minőség",
               desc: "Daikin klímák és hőszivattyúk forgalmazása. Hivatalos partnerként csak a legjobbat adjuk."
             },
             {
-              icon: <Settings className="w-10 h-10 text-white" strokeWidth={1} />,
+              id: "03",
+              icon: <Settings className="w-10 h-10 text-[#FF5252]" strokeWidth={1.5} />,
               title: "Teljes körű szolgáltatás",
               desc: "A tervezéstől a beszerelésig mindent egy kézben tartunk, és karbantartáskor is ott vagyunk."
             }
@@ -99,25 +102,35 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + (i * 0.1) }}
-              className="group relative p-10 rounded-[2.5rem] bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#FF5252]/30 hover:bg-white/[0.08] hover:-translate-y-3 transition-all duration-500 overflow-hidden shadow-2xl hover:shadow-[#FF5252]/10"
+              className="group relative p-10 rounded-[2.5rem] bg-white/[0.04] backdrop-blur-xl border border-white/10 hover:border-[#FF5252]/50 hover:bg-white/[0.08] hover:-translate-y-3 transition-all duration-500 overflow-hidden shadow-2xl hover:shadow-[#FF5252]/15"
             >
+              {/* Background Numbering */}
+              <span className="absolute -bottom-4 -right-2 text-9xl font-black text-white/[0.03] select-none pointer-events-none group-hover:text-[#FF5252]/10 transition-colors duration-700 font-heading">
+                {item.id}
+              </span>
+
               {/* Dynamic Top Edge Line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF5252]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
               
-              {/* Animated Corner Glow */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#FF5252]/10 blur-[60px] rounded-full group-hover:opacity-100 opacity-0 transition-opacity duration-700" />
+              {/* Internal Glow Source */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(255,255,255,0.05)_0%,_transparent_70%)]" />
 
               <div className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-3xl mx-auto mb-10 flex items-center justify-center group-hover:from-[#FF5252] group-hover:to-[#FF8A80] group-hover:border-[#FF5252] transition-all duration-700 shadow-2xl relative">
+                <div className="w-20 h-20 bg-white/5 border border-white/10 rounded-3xl mx-auto mb-10 flex items-center justify-center group-hover:from-[#FF5252] group-hover:to-[#FF8A80] group-hover:border-[#FF5252] transition-all duration-700 shadow-xl relative">
+                  {/* Base Glow */}
+                  <div className="absolute inset-0 rounded-3xl bg-[#FF5252]/5 opacity-100 group-hover:opacity-0 transition-opacity duration-700" />
                   {/* Pulsing Aura */}
                   <div className="absolute inset-0 rounded-3xl bg-[#FF5252]/20 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="relative z-10">{item.icon}</div>
+                  
+                  <div className="relative z-10 group-hover:text-white transition-colors duration-500">
+                    {item.icon}
+                  </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold font-heading mb-6 text-white text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                <h3 className="text-2xl font-bold font-heading mb-6 text-white text-center group-hover:translate-y-[-2px] transition-transform duration-500">
                   {item.title}
                 </h3>
-                <p className="text-white/50 font-body leading-relaxed text-center text-base group-hover:text-white/70 transition-colors duration-500">
+                <p className="text-white/50 font-body leading-relaxed text-center text-base group-hover:text-white/80 transition-colors duration-500">
                   {item.desc}
                 </p>
               </div>
