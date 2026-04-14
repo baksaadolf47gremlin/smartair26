@@ -37,6 +37,8 @@ const steps = [
     title: '6. Ügyfél-támogatás és karbantartás',
     desc: 'Az optimális működés érdekében javasoljuk a rendszer rendszeres karbantartását. Szolgáltatásunk része, hogy emlékeztetőt küldünk a karbantartási időpontokról, és gyorsan reagálunk, ha esetleg probléma merülne fel.'
   }
+];
+
 const workflowImages = [
   '/images/workflow-1.jpg',
   '/images/workflow-2.jpg',
