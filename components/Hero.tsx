@@ -45,9 +45,9 @@ export function Hero() {
             className="space-y-10"
           >
             <div className="flex items-center space-x-4">
-              <span className="h-[2px] w-12 bg-secondary" />
-              <span className="uppercase tracking-[0.3em] text-secondary font-black text-xs md:text-sm">
-                Daikin Hivatalos Partner
+              <span className="h-[2px] w-12 bg-secondary shadow-[0_0_10px_rgba(255,82,82,0.5)]" />
+              <span className="uppercase tracking-[0.3em] text-white font-black text-xs md:text-sm drop-shadow-sm">
+                <span className="text-secondary italic mr-1">Daikin</span> Hivatalos Partner
               </span>
             </div>
             
