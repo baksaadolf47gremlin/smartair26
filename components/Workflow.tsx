@@ -99,15 +99,40 @@ export function Workflow() {
                   </a>
                 </div>
               </div>
-              <div className="lg:col-span-5 relative h-full min-h-[400px] hidden lg:block overflow-hidden bg-white/5 border-l border-white/5">
-                <div className="absolute inset-0 p-8 flex items-center justify-center">
-                  <div className="relative w-full aspect-square max-w-[360px]">
-                    <div className="absolute inset-0 rounded-[3rem] overflow-hidden border-4 border-white/10 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700">
-                      <Image src="/images/workflow-2.jpg" alt="Munkafolyamat" fill className="object-cover" />
-                      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/60" />
+              <div className="lg:col-span-5 relative h-full min-h-[500px] hidden lg:flex items-center justify-center p-12">
+                {/* Decorative Background Elements */}
+                <div className="absolute w-64 h-64 bg-secondary/20 blur-[80px] rounded-full animate-pulse" />
+                <div className="absolute w-full h-full bg-[url('/images/pattern-dots.svg')] opacity-10 bg-center [mask-image:radial-gradient(white,transparent_70%)]" />
+                
+                <motion.div 
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                  className="relative w-full max-w-[380px] aspect-[4/5]"
+                >
+                  {/* Secondary Offset Frame */}
+                  <div className="absolute inset-0 border border-white/20 rounded-[3rem] translate-x-4 translate-y-4 z-0" />
+                  
+                  {/* Main Image Container */}
+                  <div className="absolute inset-0 rounded-[3rem] overflow-hidden border-2 border-white/20 shadow-2xl z-10">
+                    <Image src="/images/workflow-2.jpg" alt="Professzionális kivitelezés" fill className="object-cover scale-110" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
+                    
+                    {/* Floating Info Chip */}
+                    <div className="absolute bottom-6 left-6 right-6 p-4 bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center shadow-lg">
+                        <Award className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <p className="text-white font-bold text-sm">Hivatalos Daikin Partner</p>
+                        <p className="text-white/60 text-[10px] uppercase font-black tracking-widest leading-none mt-1">Garantált Minőség</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-secondary/40 rounded-tr-[2rem] z-20" />
+                  <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-white/20 rounded-bl-[2rem] z-20" />
+                </motion.div>
               </div>
             </div>
           </motion.div>
