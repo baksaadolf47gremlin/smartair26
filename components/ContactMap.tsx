@@ -29,7 +29,7 @@ export function ContactMap() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative rounded-[2.5rem] md:rounded-[4rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] border-8 border-white group"
+          className="relative rounded-2xl md:rounded-3xl overflow-hidden shadow-xl border-4 border-white group"
         >
           {/* The Pure Map */}
           <div className="w-full h-[450px] md:h-[600px]">
@@ -37,16 +37,16 @@ export function ContactMap() {
               src="https://maps.google.com/maps?q=SmartAir%20Budapest&t=m&z=15&output=embed&iwloc=near"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: 'contrast(1.05) saturate(1.1)' }}
+              style={{ border: 0, filter: 'contrast(1.02) saturate(1.05)' }}
               allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="transition-transform duration-[3000ms] group-hover:scale-105"
+              className="w-full h-full shadow-inner"
             ></iframe>
           </div>
 
-          {/* Subtle edge treatment for a high-end feel */}
-          <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-black/5 rounded-[2.5rem] md:rounded-[4rem]" />
+          {/* Subtle edge treatment */}
+          <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-black/5 rounded-2xl md:rounded-3xl" />
         </motion.div>
         
         {/* Simple location pointer hint below map */}
