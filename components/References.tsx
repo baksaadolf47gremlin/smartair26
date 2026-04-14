@@ -199,7 +199,7 @@ export function References() {
         >
           {[
             { value: "150+", label: "Elvégzett projekt" },
-            { value: "98%",  label: "Elégedett ügyfél" },
+            { value: "100%",  label: "Elégedett ügyfél" },
             { value: "7+",   label: "Éves tapasztalat" },
             { value: "24/7", label: "Ügyféltámogatás" },
           ].map((stat) => (
