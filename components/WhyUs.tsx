@@ -33,7 +33,7 @@ export function WhyUs() {
               transition={{ delay: 0.1 }}
               className="text-2xl md:text-3xl font-heading font-medium leading-[1.3] text-white/95"
             >
-              Ha <span className="text-secondary font-black">gyors és pontos</span> munkavégzést szeretne, ahol a cél egy <span className="border-b-2 border-secondary/50">energiahatékony</span> és hosszú távon is megbízható rendszer kialakítása, akkor Önnek a <span className="text-white font-black underline decoration-secondary decoration-4 underline-offset-4">SMARTAIR</span> a partnere.
+              Ha <span className="text-white font-black">gyors és pontos</span> munkavégzést szeretne, ahol a cél egy <span className="border-b-2 border-white/20">energiahatékony</span> és hosszú távon is megbízható rendszer kialakítása, akkor Önnek a <span className="text-white font-black underline decoration-white/30 decoration-4 underline-offset-4">SMARTAIR</span> a partnere.
             </motion.p>
             
             <motion.div 
@@ -41,7 +41,7 @@ export function WhyUs() {
               whileInView={{ opacity: 1, scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="h-px w-32 bg-secondary mx-auto origin-center" 
+              className="h-px w-32 bg-white/20 mx-auto origin-center" 
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 text-lg text-white/80 font-body leading-relaxed text-left">
