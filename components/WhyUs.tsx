@@ -43,7 +43,7 @@ export function WhyUs() {
               transition={{ delay: 0.1 }}
               className="text-2xl md:text-3xl lg:text-4xl font-heading font-light leading-[1.6] text-white/90"
             >
-              Ha <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#FF5252] to-[#FF8A80] font-black italic">gyors és pontos</span> munkavégzést szeretne, ahol a cél egy <span className="underline decoration-[#FF5252] decoration-1 underline-offset-[12px]">energiahatékony</span> és hosszú távon is megbízható rendszer kialakítása, akkor Önnek a <span className="text-white font-black underline decoration-[#FF5252] decoration-2 underline-offset-[12px]">SMARTAIR</span> a partnere.
+              Ha <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#FF5252] to-[#FF8A80] font-black italic">gyors és pontos</span> munkavégzést szeretne, ahol a cél egy <span className="italic font-medium text-white">energiahatékony</span> és hosszú távon is megbízható rendszer kialakítása, akkor Önnek a <span className="text-white font-black underline decoration-[#FF5252] decoration-2 underline-offset-[12px]">SMARTAIR</span> a partnere.
             </motion.p>
             
             <motion.div 
