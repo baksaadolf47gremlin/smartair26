@@ -102,6 +102,7 @@ export function Navbar() {
           </div>
 
             <div className="hidden lg:flex items-center">
+              <a
                 href="tel:+36206152589"
                 className={cn(
                   "flex items-center space-x-3 px-7 py-3 rounded-2xl text-sm font-black transition-all duration-300 active:scale-95",
@@ -110,10 +111,10 @@ export function Navbar() {
                     : "bg-white text-primary hover:bg-slate-50"
                 )}
               >
-              <Phone size={18} strokeWidth={3} />
-              <span>+36 20 615 2589</span>
-            </a>
-          </div>
+                <Phone size={18} strokeWidth={3} />
+                <span>+36 20 615 2589</span>
+              </a>
+            </div>
 
           {/* Mobile Toggle */}
           <button
