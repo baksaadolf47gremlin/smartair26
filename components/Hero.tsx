@@ -6,28 +6,34 @@ import { motion } from 'framer-motion';
 import { ChevronRight, Wind, Snowflake, Flame } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
-const HERO_IMAGE = '/images/hero-widescreen-4k.png'; 
+const HERO_IMAGE = '/images/hero-1-ultra-sharp.png'; 
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-48 pb-24 overflow-hidden bg-primary shadow-2xl">
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-primary/40 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
-        <Image
-          src={HERO_IMAGE}
-          alt="Daikin Prémium Klímatechnika"
-          fill
-          className="object-cover md:object-center"
-          priority
-          quality={100}
-          sizes="100vw"
-          style={{ 
-            filter: 'contrast(1.1) brightness(1.05) saturate(1.05)',
-            imageRendering: '-webkit-optimize-contrast'
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-primary/20 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
+        <motion.div 
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="w-full h-full"
+        >
+          <Image
+            src={HERO_IMAGE}
+            alt="Daikin Prémium Klímatechnika"
+            fill
+            className="object-cover md:object-center"
+            priority
+            unoptimized={true}
+            style={{ 
+              filter: 'contrast(1.15) brightness(0.9) saturate(1.1)',
+              imageRendering: 'high-quality'
+            }}
+          />
+        </motion.div>
       </div>
 
       <div className="container mx-auto px-10 md:px-20 relative z-20 mt-12">
