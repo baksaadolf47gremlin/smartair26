@@ -60,37 +60,52 @@ export function Workflow() {
 
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
-      <div className="relative py-4 md:py-6 overflow-hidden bg-primary">
+      {/* Premium CTA Reworked - Pro Proportions & Visuals */}
+      <div className="relative py-16 md:py-24 overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#001a2c]" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <motion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-xl overflow-hidden"
+            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[3rem] md:rounded-[5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-11 items-center">
-              <div className="lg:col-span-7 p-6 md:p-8 z-10">
-                <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-4">
-                  <div className="w-1 h-1 rounded-full bg-secondary animate-pulse" />
-                  <span className="text-white/60 text-[8px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
+              {/* Left Content Column */}
+              <div className="lg:col-span-6 p-10 md:p-16 lg:p-24 z-10">
+                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10">
+                  <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+                  <span className="text-white/60 text-[10px] font-black tracking-[0.3em] uppercase">Helyszíni Felmérés</span>
                 </div>
                 
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-black mb-3 leading-tight text-white tracking-tight">
-                  Tervezzük meg együtt <span className="text-white/40">klímarendszerét!</span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-8 leading-[1.05] text-white tracking-tight">
+                  Tervezzük meg együtt <br /> 
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">klímarendszerét!</span>
                 </h2>
                 
-                <p className="text-sm md:text-base text-white/60 font-body max-w-xl mb-6">
-                  Szakértő kollégáink segítenek a legmegfelelőbb megoldás kiválasztásában.
+                <p className="text-lg md:text-xl text-white/60 font-body leading-relaxed max-w-xl mb-12">
+                  Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb és leginkább energiatakarékos megoldás kiválasztásában.
                 </p>
 
+                <div className="flex flex-wrap gap-10 mb-14">
+                  {[
+                    "Mérnöki precizitás",
+                    "Daikin szakértelem"
+                  ].map((text, i) => (
+                    <div key={i} className="flex items-center space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                      <span className="text-white/80 text-sm font-bold tracking-wider uppercase">{text}</span>
+                    </div>
+                  ))}
+                </div>
+
                 <div className="flex">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-8 py-2.5 rounded-lg font-black text-[12px] hover:bg-white hover:text-primary transition-all duration-500 shadow-lg active:scale-95 uppercase tracking-widest">
-                    <span className="relative z-10 flex items-center gap-2">
-                       Ajánlatkérés
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-12 py-5 rounded-2xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_20px_40px_-10px_rgba(255,82,82,0.3)] hover:shadow-white/20 active:scale-95 overflow-hidden">
+                    <span className="relative z-10 flex items-center gap-4 uppercase tracking-widest">
+                      Ajánlatot kérek
+                      <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
@@ -98,14 +113,34 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 relative h-full min-h-[250px] hidden lg:flex items-center p-6 lg:pr-10">
-                <div className="grid grid-cols-2 gap-3 w-full h-[220px]">
-                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-[85%]">
-                    <Image src="/images/workflow-1.jpg" alt="Felmérés" fill className="object-cover" />
-                  </div>
-                  <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-[85%] mt-auto">
-                    <Image src="/images/workflow-3.jpg" alt="Telepítés" fill className="object-cover" />
-                  </div>
+              {/* Right Visual Column - Pro Gallery Layout */}
+              <div className="lg:col-span-5 relative h-full min-h-[500px] hidden lg:flex items-center p-12 lg:pr-20">
+                <div className="grid grid-cols-2 gap-6 w-full max-w-[440px] h-[440px]">
+                  {/* Image 1: Survey/Planning */}
+                  <motion.div 
+                    initial={{ y: 40, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[90%]"
+                  >
+                    <Image src="/images/workflow-1.jpg" alt="Műszaki felmérés" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
+                  </motion.div>
+                  
+                  {/* Image 2: Installation/Professionalism */}
+                  <motion.div 
+                    initial={{ y: -40, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[90%] mt-auto"
+                  >
+                    <Image src="/images/workflow-3.jpg" alt="Professzionális kivitelezés" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-primary/10" />
+                  </motion.div>
+
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-white/10 rounded-bl-[4rem]" />
                 </div>
               </div>
             </div>
