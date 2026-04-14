@@ -147,14 +147,14 @@ export function ComingSoon({ pageTitle }: ComingSoonProps) {
           Ez az oldal fejlesztés alatt áll. A további tartalmak a megbízásunk után válnak elérhetővé — sok más izgalmas funkcióval együtt:
         </motion.p>
 
-        {/* Feature cards */}
+        {/* Regular feature cards - first 6 */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4"
         >
-          {upcomingFeatures.map((feature, idx) => (
+          {upcomingFeatures.slice(0, 6).map((feature, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
@@ -173,6 +173,49 @@ export function ComingSoon({ pageTitle }: ComingSoonProps) {
               </p>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Featured full-width card - Egyedi telefonos applikáció */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.95 }}
+          className="relative group overflow-hidden rounded-2xl border border-white/15 hover:border-[#C1272D]/40 transition-all duration-500 mb-16 cursor-default"
+          style={{ background: 'linear-gradient(135deg, rgba(193,39,45,0.15) 0%, rgba(0,43,65,0.4) 50%, rgba(0,119,182,0.12) 100%)' }}
+        >
+          {/* Subtle inner glow on hover */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: 'radial-gradient(ellipse at 30% 50%, rgba(193,39,45,0.12) 0%, transparent 70%)' }}
+          />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8 p-8 md:p-10">
+            {/* Icon */}
+            <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-[#C1272D] flex items-center justify-center shadow-2xl shadow-[#C1272D]/40 group-hover:scale-105 transition-transform duration-300">
+              <Smartphone className="w-10 h-10 text-white" />
+            </div>
+
+            {/* Content */}
+            <div className="flex-grow text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-[#C1272D]/15 border border-[#C1272D]/25 px-3 py-1 rounded-full mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#C1272D] animate-pulse" />
+                <span className="text-[#C1272D] text-[10px] font-black tracking-[0.2em] uppercase">Prémium funkció</span>
+              </div>
+              <h3 className="text-white font-black text-2xl md:text-3xl font-heading mb-3 leading-tight">
+                Egyedi telefonos applikáció
+              </h3>
+              <p className="text-white/60 text-base leading-relaxed max-w-2xl">
+                Kövesd nyomon céged fejlődését bárhonnan, valós időben. Saját branded applikáció, amellyel átlátod az ajánlatokat, az ügyfeleket és a bevételt — közvetlenül a zsebedből.
+              </p>
+            </div>
+
+            {/* Right decorative elements */}
+            <div className="hidden lg:flex flex-shrink-0 items-center gap-4">
+              <div className="text-center">
+                <div className="text-4xl font-black font-heading text-white/10 leading-none">App</div>
+                <div className="text-[10px] text-white/20 uppercase tracking-widest mt-1">iOS & Android</div>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* CTA */}
