@@ -61,7 +61,7 @@ export function Workflow() {
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
       {/* Cleaned CTA - No bugs, No glow */}
-      <div className="relative py-8 md:py-12 overflow-hidden bg-primary">
+      <div className="relative py-12 md:py-14 overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-[#002f48]" />
         
         <div className="container mx-auto px-6 md:px-12 relative z-10">
@@ -69,10 +69,10 @@ export function Workflow() {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-lg overflow-hidden"
+            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] md:rounded-[4rem] shadow-xl overflow-hidden"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              <div className="lg:col-span-7 p-8 md:p-12 lg:p-16 z-10 relative">
+              <div className="lg:col-span-7 p-8 md:p-12 lg:p-20 z-10 relative">
                 <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 px-3 py-1 rounded-full mb-6">
                   <div className="w-1 h-1 rounded-full bg-secondary animate-pulse" />
                   <span className="text-white/60 text-[8px] font-black tracking-[0.3em] uppercase">Helyszíni Felmérés</span>
@@ -90,7 +90,7 @@ export function Workflow() {
                 <div className="flex flex-wrap gap-x-8 gap-y-3 mb-10">
                   {["Mérnöki precizitás", "Daikin szakértelem"].map((text, i) => (
                     <div key={i} className="flex items-center space-x-2">
-                      <div className="w-1 h-1 rounded-full bg-secondary" />
+                       <div className="w-1 h-1 rounded-full bg-secondary" />
                       <span className="text-white/80 text-[10px] font-bold uppercase tracking-wider">{text}</span>
                     </div>
                   ))}
@@ -108,21 +108,21 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative h-full min-h-[300px] hidden lg:flex items-center p-8 lg:pr-14">
-                <div className="grid grid-cols-2 gap-4 w-full h-[260px]">
+              <div className="lg:col-span-5 relative h-full min-h-[400px] hidden lg:flex items-center p-12 lg:pr-20">
+                <div className="grid grid-cols-2 gap-6 w-full h-[380px]">
                   <motion.div 
-                    initial={{ y: 20, opacity: 0 }}
+                    initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-full translate-y-2"
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[95%]"
                   >
                     <Image src="/images/workflow-1.jpg" alt="Felmérés" fill className="object-cover" />
                   </motion.div>
                   <motion.div 
-                    initial={{ y: -20, opacity: 0 }}
+                    initial={{ y: -30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-full -translate-y-2"
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[95%] mt-auto"
                   >
                     <Image src="/images/workflow-3.jpg" alt="Telepítés" fill className="object-cover" />
                   </motion.div>
