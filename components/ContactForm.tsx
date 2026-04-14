@@ -36,7 +36,6 @@ export function ContactForm() {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Telefonszám</h4>
-                    <a href="tel:+36202786150" className="text-white/80 font-body hover:text-white transition-colors block">+36 20 278 6150</a>
                     <a href="tel:+36206152589" className="text-white/80 font-body hover:text-white transition-colors block">+36 20 615 2589</a>
                   </div>
                 </div>

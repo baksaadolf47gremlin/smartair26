@@ -8,11 +8,11 @@ import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { name: 'Klíma', href: '#klima' },
-  { name: 'Hőszivattyú', href: '#hoszivattyu' },
-  { name: 'Karbantartás', href: '#karbantartas' },
-  { name: 'Rólunk', href: '#rolunk' },
-  { name: 'Kapcsolat', href: '#kapcsolat' },
+  { name: 'Klíma', href: '/klima' },
+  { name: 'Hőszivattyú', href: '/hoszivattyu' },
+  { name: 'Karbantartás', href: '/karbantartas' },
+  { name: 'Rólunk', href: '/rolunk' },
+  { name: 'Kapcsolat', href: '/#kapcsolat' },
 ];
 
 export function Navbar() {
