@@ -98,8 +98,8 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-4 relative h-full min-h-[220px] hidden lg:flex items-center p-6 lg:pr-10">
-                <div className="grid grid-cols-2 gap-3 w-full h-[200px]">
+              <div className="lg:col-span-4 relative h-full min-h-[250px] hidden lg:flex items-center p-6 lg:pr-10">
+                <div className="grid grid-cols-2 gap-3 w-full h-[220px]">
                   <div className="relative rounded-2xl overflow-hidden border border-white/20 shadow-xl h-[85%]">
                     <Image src="/images/workflow-1.jpg" alt="Felmérés" fill className="object-cover" />
                   </div>
