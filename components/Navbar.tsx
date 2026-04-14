@@ -90,12 +90,17 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  "relative text-[14px] uppercase tracking-widest font-extrabold transition-all duration-300 group",
-                  scrolled ? "text-primary/80 hover:text-secondary" : "text-white hover:text-secondary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
+                  "relative text-[13px] uppercase tracking-widest font-black transition-all duration-300 group px-4 py-2 rounded-xl",
+                  scrolled 
+                    ? "text-primary/80 hover:text-secondary hover:bg-slate-100" 
+                    : "text-white hover:text-white hover:bg-white/10 hover:scale-105 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
                 )}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                <span className={cn(
+                  "absolute bottom-2 left-4 right-4 h-0.5 bg-secondary transition-all duration-300 scale-x-0 group-hover:scale-x-100 origin-left",
+                  !scrolled && "shadow-[0_0_8px_rgba(255,82,82,0.8)]"
+                )} />
               </Link>
             ))}
           </div>
