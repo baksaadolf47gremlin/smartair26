@@ -60,55 +60,52 @@ export function Workflow() {
 
   return (
     <section className="bg-slate-50 relative overflow-hidden" id="folyamat">
-      {/* Premium Pre-workflow CTA - Compact & Filled */}
-      <div className="relative py-10 md:py-14 overflow-hidden bg-primary">
+      {/* Premium CTA Reworked - Pro Proportions & Visuals */}
+      <div className="relative py-16 md:py-24 overflow-hidden bg-primary">
         <div className="absolute inset-0 bg-[url('/images/hero-1.jpg')] bg-cover bg-center opacity-10 mix-blend-overlay" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/95 to-[#002f48]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-[#001a2c]" />
         
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto px-6 md:px-12 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[2rem] md:rounded-[3rem] shadow-2xl shadow-black/40 overflow-hidden"
+            className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[3rem] md:rounded-[5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)] overflow-hidden"
           >
-            <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
-              <div className="lg:col-span-7 p-6 md:p-8 lg:p-10 lg:pr-10 z-10 relative">
-                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full mb-4">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
-                  </span>
-                  <span className="text-white/60 text-[9px] font-black tracking-[0.3em] uppercase">Ingyenes Felmérés</span>
+            <div className="grid grid-cols-1 lg:grid-cols-11 items-center">
+              {/* Left Content Column */}
+              <div className="lg:col-span-6 p-10 md:p-16 lg:p-24 z-10">
+                <div className="inline-flex items-center space-x-3 bg-white/5 border border-white/10 px-4 py-2 rounded-full mb-10">
+                  <div className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
+                  <span className="text-white/60 text-[10px] font-black tracking-[0.3em] uppercase">Helyszíni Felmérés</span>
                 </div>
                 
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-black mb-4 leading-[1.1] text-white tracking-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-8 leading-[1.05] text-white tracking-tight">
                   Tervezzük meg együtt <br /> 
-                  <span className="text-white/40">klímarendszerét!</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">klímarendszerét!</span>
                 </h2>
                 
-                <p className="text-base md:text-lg text-white/70 font-body leading-relaxed max-w-lg mb-6">
-                  Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb megoldás kiválasztásában.
+                <p className="text-lg md:text-xl text-white/60 font-body leading-relaxed max-w-xl mb-12">
+                  Szakértő kollégáink évtizedes tapasztalattal segítenek a legmegfelelőbb és leginkább energiatakarékos megoldás kiválasztásában.
                 </p>
 
-                <div className="flex flex-wrap gap-x-6 gap-y-2 mb-8">
+                <div className="flex flex-wrap gap-10 mb-14">
                   {[
                     "Mérnöki precizitás",
-                    "Hivatalos garancia",
                     "Daikin szakértelem"
                   ].map((text, i) => (
-                    <div key={i} className="flex items-center space-x-2">
-                      <div className="w-1 h-1 rounded-full bg-secondary" />
-                      <span className="text-white/60 text-[9px] font-bold uppercase tracking-widest">{text}</span>
+                    <div key={i} className="flex items-center space-x-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                      <span className="text-white/80 text-sm font-bold tracking-wider uppercase">{text}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex">
-                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-8 py-3 rounded-xl font-black text-sm hover:bg-white hover:text-primary transition-all duration-500 shadow-xl overflow-hidden uppercase tracking-widest">
-                    <span className="relative z-10 flex items-center gap-3">
-                      Ajánlatkérés
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <a href="#kapcsolat" className="group relative inline-flex items-center justify-center bg-secondary text-white px-12 py-5 rounded-2xl font-black text-base hover:bg-white hover:text-primary transition-all duration-500 shadow-[0_20px_40px_-10px_rgba(255,82,82,0.3)] hover:shadow-white/20 active:scale-95 overflow-hidden">
+                    <span className="relative z-10 flex items-center gap-4 uppercase tracking-widest">
+                      Ajánlatot kérek
+                      <svg className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>
                     </span>
@@ -116,17 +113,34 @@ export function Workflow() {
                 </div>
               </div>
 
-              <div className="lg:col-span-5 relative h-full min-h-[300px] lg:min-h-[400px] hidden lg:flex items-center justify-center p-6">
-                <div className="relative w-full h-[260px] max-w-[420px]">
-                  {/* Primary Image */}
-                  <div className="absolute top-10 right-0 w-[80%] aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl z-0">
-                    <Image src="/images/workflow-2.jpg" alt="Professzionális munka" fill className="object-cover" />
-                  </div>
+              {/* Right Visual Column - Pro Gallery Layout */}
+              <div className="lg:col-span-5 relative h-full min-h-[500px] hidden lg:flex items-center p-12 lg:pr-20">
+                <div className="grid grid-cols-2 gap-6 w-full max-w-[440px] h-[440px]">
+                  {/* Image 1: Survey/Planning */}
+                  <motion.div 
+                    initial={{ y: 40, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[90%]"
+                  >
+                    <Image src="/images/workflow-1.jpg" alt="Műszaki felmérés" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
+                  </motion.div>
                   
-                  {/* Secondary Image */}
-                  <div className="absolute top-0 left-0 w-[65%] aspect-square rounded-2xl overflow-hidden border border-white/20 shadow-2xl z-10">
-                    <Image src="/images/hero-1.jpg" alt="Klímarendszer" fill className="object-cover" />
-                  </div>
+                  {/* Image 2: Installation/Professionalism */}
+                  <motion.div 
+                    initial={{ y: -40, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="relative rounded-[2.5rem] overflow-hidden border border-white/20 shadow-2xl h-[90%] mt-auto"
+                  >
+                    <Image src="/images/workflow-3.jpg" alt="Professzionális kivitelezés" fill className="object-cover" />
+                    <div className="absolute inset-0 bg-primary/10" />
+                  </motion.div>
+
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-4 -right-4 w-32 h-32 border-t-2 border-r-2 border-secondary/30 rounded-tr-[4rem]" />
+                  <div className="absolute -bottom-4 -left-4 w-32 h-32 border-b-2 border-l-2 border-white/10 rounded-bl-[4rem]" />
                 </div>
               </div>
             </div>
@@ -148,7 +162,6 @@ export function Workflow() {
         </div>
 
         <div ref={containerRef} className="max-w-6xl mx-auto relative">
-          {/* Vertical Spine */}
           <div className="hidden md:block absolute left-1/2 top-4 bottom-4 w-[2px] -translate-x-1/2 z-0">
             <div className="absolute inset-0 bg-slate-200" />
             <motion.div style={{ scaleY }} className="absolute inset-0 bg-gradient-to-b from-primary via-secondary to-primary origin-top" />
