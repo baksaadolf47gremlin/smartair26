@@ -99,15 +99,28 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + (i * 0.1) }}
-              className="p-10 rounded-3xl bg-white/[0.03] backdrop-blur-sm border border-white/10 hover:bg-white/[0.07] transition-all duration-500 group"
+              className="group relative p-10 rounded-[2.5rem] bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#FF5252]/30 hover:bg-white/[0.08] hover:-translate-y-3 transition-all duration-500 overflow-hidden shadow-2xl hover:shadow-[#FF5252]/10"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-2xl mx-auto mb-8 flex items-center justify-center group-hover:bg-[#FF5252] group-hover:border-[#FF5252] transition-all duration-500 shadow-2xl">
-                {item.icon}
+              {/* Dynamic Top Edge Line */}
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#FF5252]/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+              
+              {/* Animated Corner Glow */}
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-[#FF5252]/10 blur-[60px] rounded-full group-hover:opacity-100 opacity-0 transition-opacity duration-700" />
+
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-white/10 to-transparent border border-white/10 rounded-3xl mx-auto mb-10 flex items-center justify-center group-hover:from-[#FF5252] group-hover:to-[#FF8A80] group-hover:border-[#FF5252] transition-all duration-700 shadow-2xl relative">
+                  {/* Pulsing Aura */}
+                  <div className="absolute inset-0 rounded-3xl bg-[#FF5252]/20 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="relative z-10">{item.icon}</div>
+                </div>
+                
+                <h3 className="text-2xl font-bold font-heading mb-6 text-white text-center group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/60 transition-all duration-500">
+                  {item.title}
+                </h3>
+                <p className="text-white/50 font-body leading-relaxed text-center text-base group-hover:text-white/70 transition-colors duration-500">
+                  {item.desc}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-4 text-white">{item.title}</h3>
-              <p className="text-white/50 font-body leading-relaxed text-base">
-                {item.desc}
-              </p>
             </motion.div>
           ))}
         </div>
