@@ -225,7 +225,7 @@ function PhaseCard({ step, align }: { step: any, align: 'left' | 'right' }) {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         className={cn(
           "hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-secondary z-0",
-          align === 'right' ? "left-full w-12 lg:w-24 origin-right" : "right-full w-12 lg:w-24 origin-left"
+          align === 'right' ? "left-full w-16 md:w-32 lg:w-40 origin-left" : "right-full w-16 md:w-32 lg:w-40 origin-right"
         )}
       />
 
