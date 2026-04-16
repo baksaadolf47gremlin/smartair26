@@ -13,7 +13,7 @@ export function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-4 lg:pr-6">
-            <Link href="/" className="inline-block mb-8 relative h-12 w-60" style={{ filter: 'brightness(0) invert(1)' }}>
+            <Link href="/" aria-label="Smart Air Főoldal" className="inline-block mb-8 relative h-12 w-60" style={{ filter: 'brightness(0) invert(1)' }}>
               <Image 
                 src="/images/logo.png" 
                 alt="Smart Air Fehér Logó" 
@@ -42,14 +42,14 @@ export function Footer() {
 
           {/* Céges adatok */}
           <div className="lg:col-span-4">
-            <h4 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Céginformációk</h4>
+            <h3 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Céginformációk</h3>
             <ul className="space-y-5 text-[15px] text-slate-200 font-light">
               <li className="flex flex-col space-y-1">
-                <span className="text-xs uppercase tracking-widest text-[#0077B6] font-bold">Cég neve</span>
+                <span className="text-xs uppercase tracking-widest text-[#4CC9F0] font-bold">Cég neve</span>
                 <span className="text-white">SMARTAIR Épületgépészeti Kft.</span>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-xs uppercase tracking-widest text-[#0077B6] font-bold">Székhely</span>
+                <span className="text-xs uppercase tracking-widest text-[#4CC9F0] font-bold">Székhely</span>
                 <span className="text-white">1142 Budapest, Erzsébet királyné útja 57-61.</span>
               </li>
               <li className="border-t border-white/10 pt-4 mt-2 max-w-[90%]">
@@ -71,7 +71,7 @@ export function Footer() {
 
           {/* Szolgáltatások */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Szolgáltatások</h4>
+            <h3 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Szolgáltatások</h3>
             <ul className="space-y-4 text-[15px] font-light">
               <li>
                 <Link href="#klima" className="text-slate-200 hover:text-white hover:underline underline-offset-4 transition-all">
@@ -98,7 +98,7 @@ export function Footer() {
 
           {/* Jogi info */}
           <div className="lg:col-span-2">
-            <h4 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Hasznos Linkek</h4>
+            <h3 className="text-white font-bold font-heading text-lg mb-8 tracking-wide">Hasznos Linkek</h3>
             <ul className="space-y-4 text-[15px] font-light">
               <li>
                 <Link href="#" className="flex items-center space-x-2 text-slate-200 hover:text-white transition-colors group">
@@ -124,7 +124,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Line */}
-        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500 font-light">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-300 font-light">
           <p>© {new Date().getFullYear()} SMARTAIR Épületgépészeti Kft. Minden jog fenntartva.</p>
           <div className="flex items-center space-x-4 bg-white/5 px-6 py-2.5 rounded-full">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

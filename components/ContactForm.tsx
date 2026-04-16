@@ -69,23 +69,23 @@ export function ContactForm() {
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Név</label>
-                  <input type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="Teljes név" required />
+                  <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-2">Név</label>
+                  <input id="name" type="text" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="Teljes név" required />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Telefonszám</label>
-                  <input type="tel" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="+36 20 123 4567" required />
+                  <label htmlFor="phone" className="block text-sm font-bold text-slate-700 mb-2">Telefonszám</label>
+                  <input id="phone" type="tel" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="+36 20 123 4567" required />
                 </div>
               </div>
               
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">E-mail cím (nem kötelező)</label>
-                <input type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="email@pelda.hu" />
+                <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-2">E-mail cím (nem kötelező)</label>
+                <input id="email" type="email" className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body" placeholder="email@pelda.hu" />
               </div>
 
               <div>
-                <label className="block text-sm font-bold text-slate-700 mb-2">Üzenet / Érdeklődés tárgya</label>
-                <textarea rows={4} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body resize-none" placeholder="Miben segíthetünk?" required></textarea>
+                <label htmlFor="message" className="block text-sm font-bold text-slate-700 mb-2">Üzenet / Érdeklődés tárgya</label>
+                <textarea id="message" rows={4} className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all font-body resize-none" placeholder="Miben segíthetünk?" required></textarea>
               </div>
 
               <div className="flex items-start space-x-3 mb-6">

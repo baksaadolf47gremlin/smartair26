@@ -3,6 +3,7 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const clients = [
   { name: "Duna Twinhouse",        logo: "/logos/ref-DAA91D2F.png",    scale: 1.0 },
@@ -146,13 +147,14 @@ export function References() {
                     key={i}
                     style={{ width: `${itemWidth}px`, flexShrink: 0 }}
                   >
-                    <div className="group flex items-center justify-center h-48 px-4 transition-all duration-300">
-                      <img
+                    <div className="group flex items-center justify-center h-48 px-4 transition-all duration-300 relative">
+                      <Image
                         src={client.logo}
                         alt={client.name}
-                        title={client.name}
+                        fill
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                        className="object-contain px-4 transition-all duration-300 hover:scale-[1.1]"
                         style={{ transform: `scale(${client.scale})` }}
-                        className="max-h-24 w-auto max-w-[85%] object-contain transition-all duration-300 hover:scale-[1.1]!"
                       />
                     </div>
                   </div>

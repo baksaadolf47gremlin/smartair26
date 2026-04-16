@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export function About() {
   return (
@@ -45,10 +46,12 @@ export function About() {
               <div className="flex-grow flex flex-col justify-end gap-8 pb-2">
                 <div className="relative group rounded-[2.5rem] overflow-hidden border border-slate-100 shadow-2xl shadow-slate-200/40 mt-10">
                   <div className="aspect-[4/3] relative">
-                    <img 
+                    <Image 
                       src="/daikin_about.png" 
                       alt="Profi Daikin Telepítés" 
-                      className="object-cover w-full h-full transition-transform duration-1000 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                      className="object-cover transition-transform duration-1000 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
                   </div>

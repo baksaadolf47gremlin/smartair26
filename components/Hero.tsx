@@ -2,11 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { ChevronRight, Wind, Snowflake, Flame } from 'lucide-react';
+import { m } from 'framer-motion';
 import { cn } from "@/lib/utils";
 
-const HERO_IMAGE = '/images/hero-1-ultra-sharp.png'; 
+const HERO_IMAGE = '/images/hero-1.jpg'; 
 
 export function Hero() {
   return (
@@ -15,29 +14,23 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-primary/20 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-10" />
-        <motion.div 
-          initial={{ scale: 1.1, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="w-full h-full"
-        >
+        <div className="w-full h-full overflow-hidden">
           <Image
             src={HERO_IMAGE}
             alt="Daikin Prémium Klímatechnika"
             fill
-            className="object-cover md:object-center"
+            className="object-cover md:object-center animate-subtle-zoom contrast-125 brightness-90 saturate-110"
             priority
-            unoptimized={true}
-            style={{ 
-              filter: 'contrast(1.15) brightness(0.9) saturate(1.1)',
-            }}
+            sizes="100vw"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+pVPQAIXwMsS67xTQAAAABJRU5ErkJggg=="
           />
-        </motion.div>
+        </div>
       </div>
 
       <div className="container mx-auto px-10 md:px-20 relative z-20 mt-6 lg:mt-0">
         <div className="max-w-2xl">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -65,7 +58,17 @@ export function Hero() {
                 className="inline-flex items-center justify-center bg-secondary text-white px-8 md:px-10 py-3 md:py-4 rounded-xl font-bold text-sm hover:bg-[#a12025] transition-all hover:-translate-y-0.5 shadow-lg hover:shadow-xl group overflow-hidden relative"
               >
                 <span className="relative z-10">Erre van szükségem!</span>
-                <ChevronRight className="relative z-10 ml-2 group-hover:translate-x-1.5 transition-transform duration-300" />
+                <svg
+                  className="relative z-10 ml-2 w-5 h-5 group-hover:translate-x-1.5 transition-transform duration-300"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 18l6-6-6-6" />
+                </svg>
                 <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
               </a>
               <a
@@ -75,7 +78,7 @@ export function Hero() {
                 Szolgáltatásaink
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
 

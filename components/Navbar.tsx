@@ -3,9 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { name: 'Klíma', href: '/klima' },
@@ -29,29 +28,22 @@ export function Navbar() {
 
   return (
     <>
-      <motion.header
-        initial={false}
-        animate={{
-          height: scrolled ? 70 : 100,
-          backgroundColor: scrolled ? 'rgba(255, 255, 255, 0.9)' : 'rgba(255, 255, 255, 0)',
-          marginTop: scrolled ? 16 : 0,
-          width: scrolled ? '95%' : '100%',
-          borderRadius: scrolled ? 24 : 0,
-        }}
-        transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+      <header
         className={cn(
-          'fixed top-0 left-1/2 -translate-x-1/2 z-50 flex items-center px-6 md:px-12 transition-all',
-          scrolled ? 'border border-white/20 backdrop-blur-xl shadow-2xl' : ''
+          'fixed left-1/2 -translate-x-1/2 z-50 flex items-center px-6 md:px-12 transition-all duration-500 ease-in-out',
+          scrolled 
+            ? 'top-4 w-[95%] h-[70px] bg-white/90 backdrop-blur-xl border border-white/20 shadow-2xl rounded-[24px]' 
+            : 'top-0 w-full h-[100px] bg-transparent'
         )}
       >
         <div className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="relative flex items-center h-10 w-44 md:w-52 group">
-            <motion.div
+          <Link href="/" aria-label="Smart Air Főoldal" className="relative flex items-center h-10 w-44 md:w-52 group">
+            <m.div
               animate={{ scale: scrolled ? 0.9 : 1 }}
               className="relative h-full w-full p-2 transition-all duration-300"
             >
               {/* Solid White Logo (Initial) - Using filter on color logo */}
-              <motion.div
+              <m.div
                 animate={{ opacity: scrolled ? 0 : 1 }}
                 transition={{ duration: 0.4 }}
                 className="absolute inset-0"
@@ -62,12 +54,11 @@ export function Navbar() {
                   alt="Smart Air Logo Solid White"
                   fill
                   className="object-contain object-left px-2"
-                  priority
                 />
-              </motion.div>
+              </m.div>
 
               {/* Colored Logo (Scrolled) */}
-              <motion.div
+              <m.div
                 animate={{ opacity: scrolled ? 1 : 0 }}
                 transition={{ duration: 0.4 }}
                 className="absolute inset-0"
@@ -77,10 +68,9 @@ export function Navbar() {
                   alt="Smart Air Logo Color"
                   fill
                   className="object-contain object-left px-2"
-                  priority
                 />
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           </Link>
 
           {/* Desktop Nav */}
@@ -111,7 +101,9 @@ export function Navbar() {
                     : "bg-white text-primary hover:bg-slate-50"
                 )}
               >
-                <Phone size={18} strokeWidth={3} />
+                <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.81 12.81 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                </svg>
                 <span>+36 20 615 2589</span>
               </a>
             </div>
@@ -125,15 +117,19 @@ export function Navbar() {
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Menü"
           >
-            {isOpen ? <X size={32} /> : <Menu size={32} />}
+            {isOpen ? (
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12" /></svg>
+            ) : (
+              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+            )}
           </button>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
@@ -144,7 +140,7 @@ export function Navbar() {
               onClick={() => setIsOpen(false)}
               className="absolute top-8 right-8 text-primary"
             >
-              <X size={40} />
+              <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18M6 6l12 12" /></svg>
             </button>
             <div className="flex flex-col items-center space-y-10 p-4">
               {navItems.map((item) => (
@@ -161,14 +157,13 @@ export function Navbar() {
                 href="tel:+36206152589"
                 className="flex items-center space-x-3 bg-secondary text-white px-10 py-5 rounded-full text-xl font-black shadow-2xl"
               >
-                <Phone size={24} />
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.81 12.81 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>
                 <span>+36 20 615 2589</span>
               </a>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>
   );
 }
-
