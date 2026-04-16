@@ -19,11 +19,11 @@ export function Hero() {
             src={HERO_IMAGE}
             alt="Daikin Prémium Klímatechnika"
             fill
-            className="object-cover md:object-center animate-subtle-zoom contrast-125 brightness-90 saturate-110"
+            className="object-cover md:object-center"
             priority
             sizes="100vw"
-            placeholder="blur"
-            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+pVPQAIXwMsS67xTQAAAABJRU5ErkJggg=="
+            quality={100}
+            unoptimized
           />
         </div>
       </div>
