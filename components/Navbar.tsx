@@ -33,7 +33,7 @@ export function Navbar() {
           'fixed left-1/2 -translate-x-1/2 z-50 flex items-center px-6 md:px-12 transition-all duration-500 ease-in-out',
           scrolled 
             ? 'top-4 w-[95%] h-[70px] bg-white/90 backdrop-blur-xl border border-white/20 shadow-2xl rounded-[24px]' 
-            : 'top-0 w-full h-[100px] bg-transparent'
+            : 'top-0 w-full h-[100px] bg-black/30 backdrop-blur-md border-b border-white/10'
         )}
       >
         <div className="container mx-auto flex items-center justify-between">
