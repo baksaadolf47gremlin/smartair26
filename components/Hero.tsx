@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { m } from 'framer-motion';
 import { cn } from "@/lib/utils";
 
-const HERO_IMAGE = '/images/hero-1.jpg'; 
+const HERO_IMAGE = '/images/hero-1-ultra-sharp.png'; 
 
 export function Hero() {
   return (
