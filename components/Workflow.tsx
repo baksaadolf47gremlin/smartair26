@@ -221,7 +221,7 @@ function PhaseCard({ step, align }: { step: any, align: 'left' | 'right' }) {
       <motion.div 
         initial={{ scaleX: 0, opacity: 0 }}
         whileInView={{ scaleX: 1, opacity: 1 }}
-        viewport={{ once: true, margin: "-48% 0px -48% 0px" }}
+        viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={cn(
           "hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-secondary z-0",
