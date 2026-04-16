@@ -225,7 +225,7 @@ function PhaseCard({ step, align }: { step: any, align: 'left' | 'right' }) {
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         className={cn(
           "hidden md:block absolute top-1/2 -translate-y-1/2 h-[2px] bg-secondary z-0",
-          align === 'right' ? "left-full w-16 md:w-32 lg:w-40 origin-left" : "right-full w-16 md:w-32 lg:w-40 origin-right"
+          align === 'right' ? "left-1/2 w-[50vw] origin-left" : "right-1/2 w-[50vw] origin-right"
         )}
       />
 
@@ -257,7 +257,7 @@ function PhaseImage({ src, index }: { src: string, index: number }) {
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
-      className="relative aspect-[4/3] md:aspect-[5/4] rounded-[2.5rem] overflow-hidden shadow-2xl"
+      className="relative aspect-[4/3] md:aspect-[5/4] rounded-[2.5rem] overflow-hidden shadow-2xl z-10 bg-slate-50"
     >
       <Image src={src} alt="Smart Air Workflow" fill className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-60" />
